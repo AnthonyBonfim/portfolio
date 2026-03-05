@@ -141,6 +141,7 @@ button {
 
 .btn {
   display: block;
+  border-radius: 10px;
   padding: 0.8em 1.4em;
   font-weight: 500;
   font-size: 0.9rem;
@@ -277,9 +278,9 @@ main {
   margin-right: 0.8em;
 }
 
-.about .btn--outline {
-  margin-right: 1em;
-}
+/* .about .btn--outline { */
+/*   margin-right: 1em; */
+/* } */
 
 .projects__grid {
   max-width: 1100px;
@@ -290,37 +291,57 @@ main {
 }
 
 .project {
-  padding: 2em;
-  margin: 0 auto;
-  text-align: center;
-  box-shadow: var(--shadow);
+  position: relative;
+  width: 35vh;
+  height: 35vh;
+  margin: auto;
+  cursor: pointer;
+  overflow: hidden;
+  border-radius: 25px;
+  /* box-shadow: var(--shadow); */
   transition: transform 0.2s linear;
+
+  img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+  }
+}
+
+.project:hover img {
+  -webkit-filter: brightness(50%);
+  transition: 0.2s linear;
 }
 
 .project:hover {
   transform: translateY(-7px);
 }
 
-.project__description {
-  margin-top: 1em;
-}
-
-.project__stack {
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: 0.2s ease;
+  background-color: rgba(0, 0, 0, 0);
   display: flex;
-  flex-wrap: wrap;
   justify-content: center;
-  margin: 1.2em 0;
+  align-items: center;
+
+  .title h4 {
+    color: white;
+    font-size: 1.5rem;
+    text-align: center;
+  }
+
 }
 
-.project__stack-item {
-  margin: 0.5em;
-  font-weight: 500;
-  font-size: 0.8rem;
-  color: var(--clr-fg-alt);
-}
-
-.project .link--icon {
-  margin-left: 0.5em;
+.project:hover .overlay {
+  opacity: 1; /* Visible on hover */
 }
 
 .skills__list {
@@ -337,6 +358,7 @@ main {
 }
 
 .contact {
+  display: flex;
   flex-direction: column;
 }
 

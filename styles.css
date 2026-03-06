@@ -126,7 +126,6 @@ button {
 
 .link--nav {
   color: var(--clr-fg);
-  text-transform: lowercase;
   font-weight: 500;
 }
 
@@ -137,11 +136,10 @@ button {
 
 .btn {
   display: block;
-  border-radius: 10px;
+  border-radius: 16px;
   padding: 0.8em 1.4em;
   font-weight: 500;
   font-size: 0.9rem;
-  text-transform: lowercase;
   transition: transform 0.2s ease-in-out;
 }
 
@@ -303,7 +301,7 @@ main {
   margin-bottom: 2em;
   max-width: 100%;
   overflow: hidden;
-  border-radius: 25px;
+  border-radius: 16px;
 }
 
 .page__img {
@@ -311,7 +309,7 @@ main {
   margin-bottom: 2em;
   max-width: 70%;
   overflow: hidden;
-  border-radius: 25px;
+  border-radius: 16px;
 }
 
 /* .about .btn--outline { */
@@ -333,7 +331,7 @@ main {
   margin: auto;
   cursor: pointer;
   overflow: hidden;
-  border-radius: 25px;
+  border-radius: 16px;
   transition: transform 0.2s linear;
 
   img {
@@ -423,6 +421,7 @@ main {
 @media (max-width: 600px) {
   .header {
     height: 6em;
+    max-width: 90%;
   }
 
   .section {

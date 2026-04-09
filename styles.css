@@ -56,7 +56,7 @@ h1,
 h2,
 h3,
 h4 {
-  line-height: 1.2;
+  line-height: 1.25;
   color: var(--clr-fg-alt);
 }
 
@@ -285,14 +285,24 @@ main {
 
 .page__title {
   margin-bottom: 0.25em;
+  text-align: center;
 }
 
 .page__subtitle {
   margin-bottom: 2em;
+  text-align: center;
+  font-weight: 400;
+  max-width: 70%;
 }
 
 .page__paragraph {
   margin-bottom: 2em;
+  max-width: 70%;
+}
+
+.page__info {
+  font-size: 0.8rem;
+  margin-bottom: 1.5em;
   max-width: 70%;
 }
 
@@ -302,6 +312,7 @@ main {
   max-width: 100%;
   overflow: hidden;
   border-radius: 16px;
+  cursor: pointer;
 }
 
 .page__img {
@@ -310,6 +321,25 @@ main {
   max-width: 70%;
   overflow: hidden;
   border-radius: 16px;
+  cursor: pointer;
+}
+
+.page__imghalf {
+  display: block;
+  margin-bottom: 2em;
+  max-width: 34.25%;
+  overflow: hidden;
+  border-radius: 16px;
+  cursor: pointer;
+}
+
+.page__video {
+  display: block;
+  margin-bottom: 2em;
+  max-width: 70%;
+  overflow: hidden;
+  border-radius: 16px;
+  cursor: pointer;
 }
 
 /* .about .btn--outline { */
@@ -469,7 +499,15 @@ main {
     display: none;
   }
 
+  .page__subtitle {
+    max-width: 90%;
+  }
+
   .page__paragraph {
+    max-width: 90%;
+  }
+
+  .page__info {
     max-width: 90%;
   }
 
@@ -478,6 +516,14 @@ main {
   }
 
   .page__img {
+    max-width: 90%;
+  }
+
+  .page__imghalf {
+    max-width: 90%;
+  }
+
+  .page__video {
     max-width: 90%;
   }
 }

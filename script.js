@@ -61,3 +61,11 @@ const scrollUp = () => {
 }
 
 document.addEventListener('scroll', scrollUp)
+
+document.querySelectorAll('.page__img, .page__imghalf, .page__hero, .page__video').forEach(img => {
+  img.addEventListener('click', () => toggleFS(img));
+});
+
+function toggleFS(el) {
+  document.fullscreenElement ? document.exitFullscreen() : el.requestFullscreen();
+}
